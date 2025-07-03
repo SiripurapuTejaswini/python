@@ -141,3 +141,19 @@ if sum==a:
   print("armstrong number")
 else:
   print("not an armstrong number")
+
+# niven's / harshad
+
+a=int(input("enter the number"))
+temp=a
+sum=0
+while temp>0:
+  digit=temp%10
+  sum+=digit
+  temp//=10
+  print("latest value of sum:",sum)
+  print("latest value of temp:",temp)
+if a%sum==0:
+  print("harshad number")
+else:
+  print("not a harshad number")
