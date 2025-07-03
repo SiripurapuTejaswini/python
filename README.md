@@ -123,3 +123,21 @@ s=123
 for key,value in info.items():
     if value==s:
         print(f"key for value:'(s)':{key}")
+
+
+# armstrong number
+
+a=int(input("enter the number"))
+temp=a
+n=len(str(a))
+sum=0
+while temp>0:
+  digit=temp%10
+  sum+=digit**n
+  temp//=10
+print("latest value of sum:",sum)
+print("latest value of temp:",temp)
+if sum==a:
+  print("armstrong number")
+else:
+  print("not an armstrong number")
