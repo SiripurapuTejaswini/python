@@ -23,6 +23,17 @@ a=a-b
 print(a)
 print(b)
 
+# range
+for i in range(51):
+  print("i",end=" ")
+
+word=input("enter a word:")
+for ab in word:
+  print(ab)
+
+for i in range(10,-1,-1):
+  print(i,end=" ")
+
 # swap *,/
 a=int(input())
 b=int(input())
@@ -157,3 +168,7 @@ if a%sum==0:
   print("harshad number")
 else:
   print("not a harshad number")
+
+for i in "teju":
+  print(i)
+
