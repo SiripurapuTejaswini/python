@@ -190,3 +190,45 @@ for i in range(n):
       print(" ",end=" ")
   print()
 
+# for anti diagonal
+n=int(input("enter the size"))
+for i in range(n):
+  for j in range(n):
+    if i==0 or i==n-1 or j==0 or j==n-1 or i==j or i+j==n-1:
+      print("*",end=" ")
+    else:
+      print(" ",end=" ")
+  print()
+
+# for diagonal
+
+  n=int(input("enter the size"))
+for i in range(n):
+  for j in range(n):
+    if i==0 or i==n-1 or j==0 or j==n-1 or i==j:
+      print("*",end=" ")
+    else:
+      print(" ",end=" ")
+  print()
+
+ # butterfly
+ 
+ n=int(input("enter the size"))
+for i in range(n):
+  for j in range(n):
+    if j==0 or j==n-1 or i==j or i+j==n-1:
+      print("*",end=" ")
+    else:
+      print(" ",end=" ")
+  print()
+
+  # for printing x
+
+  n=int(input("enter the size"))
+for i in range(n):
+  for j in range(n):
+    if i==j or i+j==n-1:
+      print("*",end=" ")
+    else:
+      print(" ",end=" ")
+  print()
