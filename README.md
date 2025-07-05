@@ -310,3 +310,12 @@ for i in range(n-1,0,-1):
     print("* ",end=" ")
   print()
 
+# number pattern printing
+
+n=int(input("enter the size"))
+r=int(input("enter the size"))
+for i in range(r):
+  for j in range(i):
+    print(n,end=" ")
+    n+=1
+  print()
