@@ -275,3 +275,38 @@ for i in range(n):
     else:
       print(" ",end=" ")
   print()
+
+  # full triangle pattern
+
+  n=int(input("enter the size"))
+for i in range(n):
+  for j in range(i): # for single for loop=("*"*i)
+      print("*",end=" ")
+  print()
+
+  # reverse full pattern
+
+  n=int(input("enter the size"))
+for i in range(n,0,-1):
+  for j in range(n-i):
+    print("",end=" ")
+  for k in range(i):
+    print("*",end=" ")
+  print()
+
+# rhombus
+
+n=int(input("enter the size"))
+for i in range(1,n+1):
+  for j in range(n-i):
+      print('  ',end=" ")
+  for k in range(2*i-1):
+    print("* ",end=" ")
+  print()
+for i in range(n-1,0,-1):
+  for j in range(n-i):
+      print('  ',end=" ")
+  for k in range(2*i-1):
+    print("* ",end=" ")
+  print()
+
