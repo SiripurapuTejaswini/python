@@ -348,3 +348,24 @@ for row in matrix:
   for val in row:
     print(f"{val:3}",end='')
   print()
+
+# traversal of matrix
+
+matrix=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+rows= len(matrix)
+cols= len(matrix[0])
+top,left=0,0
+right,bottom=cols-1,rows-1
+while top<=bottom and left<=right:
+  for i in range(left,right+1):
+    print(matrix[top][i],end=' ')
+  top+=1
+  for i in range(top,bottom+1):
+    print(matrix[i][right],end=' ')
+  right-=1
+  for i in range(right,left-1,-1):
+    print(matrix[bottom][i],end=' ')
+  bottom-=1
+  for i in range(bottom,top-1,-1):
+    print(matrix[i][left],end=' ')
+  left+=1
