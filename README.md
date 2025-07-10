@@ -442,9 +442,45 @@ result=value()
 print("value in the function is",result)
 
 # to find the value present in the function 'user defined'
-
 def value():
   a=input()
   return a # if we want to add number we can add after 'a'-->(a+b)
 result=value()
 print("value in the function is",result)
+
+# to lines printing at a time
+def hi(name='guest'):
+  print("hello",name)
+a=input("enter data:")
+hi()
+hi(a) # here data is stored in-->def hi(name)
+
+# pgrm
+def info(name='unknown', age=0):
+  print("NAME:",name)
+  print("AGE:",age)
+info("devi",21)
+info("dev")
+info(age=21)
+info()
+# all data types at a time
+def cal(a,b):
+  return a+b,a-b,a*b,a/b
+a=int(input("enter a:"))
+b=int(input("enter b:"))
+sum,diff,pro,div=cal(a,b)
+print("sum=",sum)
+print("difference=",diff)
+print("product=",pro)
+print("divide=",div)
+
+# printing minimum and maximum values
+def num(a,b,c):
+  return min(a,b,c),max(a,b,c)
+a=int(input())
+b=int(input())
+c=int(input())
+mini,maxi=num(a,b,c)
+print("minimum=",mini)
+print("maximum=",maxi)
+
