@@ -406,3 +406,45 @@ for row in matrix:
   for val in row:
     print(f"{val:3}",end='')
   print()
+
+# user defined functions
+
+*****(we have to take function name which is not a pre defined function
+if we def starting it doesnot start reading from starting it will read from ending)*****
+
+def hi():
+  print("hello students") # call it as-->response of callee
+  print("teju"*5) #prints the name 5 times
+hi() #caller
+
+# functions with parameters
+
+def add(a,b):
+  return a+b   ****# here we use a,b instead of student1,2 i.e, a,b are in 'add' statement in the line 4 near total we have used add so the a,b are stored in 'add' & to total****
+student1=int(input("enter the money:"))
+student2=int(input("enter the money:"))
+total=add(student1,student2)
+print("total amount:",total)
+
+# functions with parameters/return value
+
+def add(a,b): #can use(a,b)-->student1,student2
+  print("total:",a+b) #can use(a+b)-->student1+student2
+student1=int(input("enter the money:"))
+student2=int(input("enter the money:"))
+add(student1,student2)
+
+# to find the value present in the function
+
+def value():
+  return 3.14159
+result=value()
+print("value in the function is",result)
+
+# to find the value present in the function 'user defined'
+
+def value():
+  a=input()
+  return a # if we want to add number we can add after 'a'-->(a+b)
+result=value()
+print("value in the function is",result)
