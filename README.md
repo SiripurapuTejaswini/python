@@ -495,7 +495,25 @@ def eo(numbers):
       o+=1
   return e,o
 num=input("enter the numbers as space seperated:") 
-num_list=list(map(int,num.split()))  ******# num ni list ki convert chesi map chesi space isthe print idhi output lo*****
+num_list=list(map(int,num.split()))  ******# spliting the input string numbers into list*****
 e,o=eo(num_list)
 print("even count:",e)
 print("odd count:",o) 
+
+# lambda udv:arthematic op
+# *******op= lambda a,b,c:(a+b)-c********
+expo=lambda a:a**a
+print(expo(3))
+
+# 2 samples adding
+add=lambda a,b:a+b
+print(add(7,8))
+
+# even odd boolean
+is_even=lambda n:n%2==0
+print(is_even(6))
+
+# printing squares of some numbers
+nums=[1,2,3,4,5,6,7,89,10]
+sq=list(map(lambda n:n*n,nums))
+print(sq)
