@@ -517,3 +517,69 @@ print(is_even(6))
 nums=[1,2,3,4,5,6,7,89,10]
 sq=list(map(lambda n:n*n,nums))
 print(sq)
+
+# function within function/nested function
+def outer():
+  print("outer function")
+  def inner():
+    print("inner function")
+  inner()
+outer()
+
+# function within functions
+def cal(a,b):
+  def add():
+    return a+b
+  def sub():
+      return a-b
+  def mul():
+        return a*b
+  print("addition",add())
+  print("subtraction",sub())
+  print("mutlipilaction",mul())
+a=int(input("enter a num"))
+b=int(input("enter b num"))
+cal(a,b)
+
+# pgrm
+def mul_by(n):
+  def inner(x): # call inner fun x=5
+    return x*n #x*2 x*3
+  return inner
+times_2=mul_by(2) #n=2
+times_3=mul_by(3) #n=3
+print(times_2(5))
+print(times_3(5))
+
+# pgrm
+def greet(text):
+  def inner(name):
+    return f"{text} {name}"
+  return inner
+hi=greet("hello")
+print(hi("teju"))
+
+# pgrm
+def titled(title):
+  def greet(name):
+    return f"hello,{title}{name}"
+  return greet
+mr_greet=titled("mr.")
+dr_greet=titled("dr.")
+print(mr_greet("mine"))
+print(dr_greet("teju"))
+
+# pgrm
+x=100
+y=10
+def display():
+  x=22
+  print("x= ",x)
+  print("locally",x+y)
+display()
+print("x=",x)  
+y=10
+y=25
+print(y)
+print("globally",x+y)
+
