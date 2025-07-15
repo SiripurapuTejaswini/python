@@ -583,3 +583,26 @@ y=25
 print(y)
 print("globally",x+y)
 
+# factorial-->(fact of 3=3*2*1=6)
+fact=1
+def factorial(n):
+  global fact #---->we use global to call the variable outside the function --> fact is outside by using global we called it into pgrm/function
+  fact=1
+  for i in range(1,n+1):
+    fact*=i
+  return fact
+num=int(input("enter number:"))
+if num<0:
+  print("no factorial for negative number")
+else:
+  factorial(num)
+  print(f"factorial of {num} is",fact)
+
+# recurssion
+def factorial(n):
+  if n==0 or n==1: #----->4 not equal to 0 & 1 then the if condition will be skipped
+    return 1       #----->if num is 0 or 1 then it will return as 1
+  return n*factorial(n-1)  # 4*3-->n-1=4-1------>4*3*2*1=24
+num=int(input("enter the number")) #if num =4
+value=factorial(num)
+print(value)
