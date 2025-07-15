@@ -606,3 +606,57 @@ def factorial(n):
 num=int(input("enter the number")) #if num =4
 value=factorial(num)
 print(value)
+
+# another type in recurssion
+def nsum(n):
+  if n==0:
+    return 0
+  return n+nsum(n-1)
+num=int(input("enter the number"))
+print("natural number is",nsum(num)) #---->if num=3 then it will add 3+2+1=6
+
+# reverse recurssion
+def rstring(s):
+  if len(s)==0:
+    return s #---->if we don't give any input it prints empty i.e, string(s)
+  return rstring(s[1:])+s[0] #----->last letter will cut and adds at 1st place this will repeat until it returns 0--->teju=ujet
+text=input("enter the word")
+print(rstring(text))
+
+# positional arguments(*args) --->multiple num's data should be done at a time
+def sumnum(*args):
+  print(args[9])
+  return sum(args) # we can use max,min,... instead of sum
+print(sumnum(1,2,3,4,5,6,7,8,9,10))
+
+# keyword args(**kwargs)
+def info(**kwargs):
+  for key,value in kwargs.items():
+    print(f"{key}:{value}")
+info(name='teju',age=31,cgpa=4.9)
+
+# keyword args(**kwargs)
+def info(**kwargs):
+  for key,value in kwargs.items():
+    print(f"{key}:{value}")
+  name=kwargs['name']
+  print(f"name:{name}")
+info(name='teju',age=31,cgpa=4.9)
+
+# pgrm to print keys and values
+def info(**kwargs):
+  #print("values:",kwargs.values())
+  #print("------------")
+  #for values in kwargs.values():
+   # print(values)
+  for key,values in kwargs.items():
+    print(f"{key}:{values}")
+info(name='teju',age=21,cgpa=9.9)
+
+# recursions
+1.direct recursions-function calls itself
+2.indirect recursion-function calling another function 
+3.head recursion-1st call Recursion
+4.tail recurssion-last call recursion
+5.nested recursion-recursion with-in recursion
+6.tree recursion-
