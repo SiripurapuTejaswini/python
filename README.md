@@ -660,3 +660,54 @@ info(name='teju',age=21,cgpa=9.9)
 4.tail recurssion-last call recursion
 5.nested recursion-recursion with-in recursion
 6.tree recursion-
+
+# fabonacci using recursion
+def fib(n):
+  if n<=1:
+    return n
+  else:
+    return fib(n-1)+fib(n-2)
+n=int(input("enter no.of terms"))
+for i in range(n):
+  print(fib(i),end=' ')
+
+#### indirect recursion #### 
+# adding the digits of a number
+def dsum(n):
+  if n==0:
+    return 0
+  return n%10+temp(n//10)
+def temp(n):
+  return dsum(n)
+n=int(input("enter a number"))
+print("sum of digits:",dsum(n))
+
+# even or odd without modulus--> n%=2
+def one(n):
+  if n==0:
+    return True
+  else:
+    return two(n-1)
+def two(n):
+def A(n):
+  if n<=0:
+    return
+  print("teja",n)
+  B(n-1)
+def B(n):
+  if n<=0:
+    return
+  print("teju",n)
+  A(n-1)
+num=int(input("enter a number:"))
+A(num)  if n==0:
+    return False
+  else:
+    return one(n-1)
+num=int(input("enter a number"))
+if one(num):
+  print((num),"is even")
+else:
+  print(num,"is odd")
+
+# pgrm
