@@ -721,7 +721,7 @@ print(("fabimacci series"))
 for i in range(terms):
   print(fib(i),end=" ")
 
-# solving
+# expelnation
 i=0 n=0 =<=1 return 0
 i=1 n=1 1<=1 return 1
 i=2 n=2 2<=1 false fib(2-1)+fib(2-2)
@@ -729,9 +729,15 @@ i=2 n=2 2<=1 false fib(2-1)+fib(2-2)
                    1+0=1
 fib(1) i=1 n=1 1<=1 return 1
 fib(0) i=0 n=0 0<=1 return 0
-i=3 n=3 3<=1 False fib(3-1)+fib(3-2)
+i=3 n=3 3<=1 False fib(3-1)+fib(3-2) #n-1,n-2
                    fib(2)+fib(1)
-
+                   1+1=2-------->this will come with adding of previous 2 index numbers(0 1 1 2 3 ......)
+i=4 n=4 4<=1 False fib(4-1)+fib(4-2) #n-1,n-2
+                   fib(3)+fib(2)
+                   2+1=3
+i=5 n=5 5<=1 False fib(5-1)+fib(5-2)
+                  fib(4)+fib(3)
+                  3+2=5
 # permutations of char in tree recursion
 def permute(s, bucket=' '):
   if not s:
@@ -744,3 +750,21 @@ def permute(s, bucket=' '):
 text=input("enter the name:")
 print("possibilities of combinations")
 permute(text)
+
+# expelnation
+for i in range(len(abc)) ns=s[:i]+s[i+1:]
+i=0 A "bc"
+i=1 B "ac"
+i=2 C "ab"
+permute(bc,bucket='a')
+i=0 B "c"
+i=1 C"b"
+permute(c,bucket='ab')   permute(b,bucket=ac)
+i=0  c   ""               i=0 b new ' '
+permute(" ",bucket='abc')    permute(" ",bucket='acb')
+permute("abc",bucket='')      ns=s[:i]+s[i+1:]
+permute(" ac",bucket='b')
+i=0 A"c"
+i=1 c"a"
+permute(" c",bucket='ba') permute(" a",bucket='bc')
+permute("",bucket='bac')permute(" ",bucket='bca')
