@@ -710,4 +710,37 @@ if one(num):
 else:
   print(num,"is odd")
 
-# pgrm
+#### tree recursion #####
+## fabinacci series with user input
+def fib(n):
+  if n<=1:
+    return n
+  return fib(n-1)+fib(n-2)
+terms=int(input("enter the number of terms to print"))
+print(("fabimacci series"))
+for i in range(terms):
+  print(fib(i),end=" ")
+
+# solving
+i=0 n=0 =<=1 return 0
+i=1 n=1 1<=1 return 1
+i=2 n=2 2<=1 false fib(2-1)+fib(2-2)
+                   fib(1)+fib(0)
+                   1+0=1
+fib(1) i=1 n=1 1<=1 return 1
+fib(0) i=0 n=0 0<=1 return 0
+i=3 n=3 3<=1 False fib(3-1)+fib(3-2)
+                   fib(2)+fib(1)
+
+# permutations of char in tree recursion
+def permute(s, bucket=' '):
+  if not s:
+    print(bucket)
+    return
+  for i in range(len(s)):
+    ns=s[:i]+s[i+1:]
+  permute(s[1:],bucket+s[0])
+  permute(s[1:],bucket)
+text=input("enter the name:")
+print("possibilities of combinations")
+permute(text)
